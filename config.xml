@@ -31,6 +31,6 @@
     <access origin="*" />
     
      <!-- Define app icon for each platform. -->
-    <icon src="imagenes/icon.png">
+    <icon src="./imagenes/icon.png">
 
 </widget>
