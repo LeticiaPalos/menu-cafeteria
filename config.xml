@@ -29,5 +29,8 @@
     
     <!-- Define access to external domains. -->
     <access origin="*" />
+    
+     <!-- Define app icon for each platform. -->
+    <icon src="imagenes/icon.png">
 
 </widget>
