@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  	<title>Menú del día</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.css" />
+		<style type="text/css">
+			IMG.imgcenter{
+			  display: block;
+			  margin-left: auto;
+			  margin-right: auto;
+			  border:none;
+			} 
+		</style>
+		  <!-- Extra Codiqa features -->
+		  <link rel="stylesheet" href="css/codiqa.ext.css">
+		  
+		  <!-- jQuery and jQuery Mobile -->
+		  <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+		  <script src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script>
+
+		  <!-- Extra Codiqa features -->
+		  <script src="https://d10ajoocuyu32n.cloudfront.net/codiqa.ext.js"></script>
+		    
+		<!-- SRC JavaScript -->
+		<script src="phonegap.js"></script>
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script> 
+		<script src="read_menu.js"></script>
+	</head>
+	<body>		
+		<div data-role="page" id="page1">
+			<div data-theme="a" data-role="header">
+				<h1>Menú del día</h1>
+			</div>
+			<img src="imagenes/logo.jpg" alt="image" class="imgcenter">
+			<p></p>
+			<div data-role="content">
+				<div id=date>
+					<h2>Comedor de Estudiantes</h2>
+					Barras:
+				</div>
+				<div data-role="collapsible-set" data-theme="c" data-content-theme="d" data-collapsed-icon="arrow-r" data-expanded-icon="arrow-d">
+					<div data-role="collapsible">
+						<h3>Caliente</h3>
+						<div id="normal"></div> 
+					</div>
+					<div data-role="collapsible">
+						<h3>Bienestar</h3>
+						<div id="bienestar"></div> 
+					</div>
+					<div data-role="collapsible">
+						<h3>Express</h3>
+						<div id="express"></div> 
+					</div>
+				</div><br><br>
+			</div>		
+			<div data-theme="a" data-role="footer" data-position="fixed">
+				<h3>
+					Innov@TE
+				</h3>
+			</div>
+		</div>
+	</body>
+</html>
+	
+	
