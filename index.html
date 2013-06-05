@@ -14,6 +14,20 @@
 			  border:none;
 			} 
 		</style>
+		
+		 <script type="text/javascript" charset="utf-8">
+
+		    // Wait for Cordova to load
+		    //
+		    document.addEventListener("deviceready", onDeviceReady, false);
+		
+		    // Cordova is ready
+		    //
+		    function onDeviceReady() {
+		        navigator.splashscreen.show();
+		    }
+		
+		    </script>
 		  <!-- Extra Codiqa features -->
 		  <link rel="stylesheet" href="css/codiqa.ext.css">
 		  
