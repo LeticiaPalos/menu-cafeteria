@@ -41,7 +41,10 @@
 		<script src="read_menu.js"></script>
 	</head>
 	<body>	
-		<div data-role="page" id="home">
+		<script type="text/javascript">var submitted=false;</script>
+		<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {window.location='#home';}"></iframe>
+		<form action="https://docs.google.com/a/itesm.mx/forms/d/1Mkiy_hNj3BPiv4LYk8wckqIOciPaOAuY1anCBAptZPk/formResponse" method="post" target="hidden_iframe" onsubmit="submitted=true;">
+		     <div data-role="page" id="home">
 			<div data-theme="a" data-role="header">
 				<h1>Menú del día</h1>
 			</div>
@@ -145,10 +148,7 @@
 			</div>
 		</div>
 		<!-- Form de sugerencias -->
-		<div data-role="page" id="page4">
-			<script type="text/javascript">var submitted=false;</script>
-			<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {window.location='#home';}"></iframe>
-			<form action="https://docs.google.com/a/itesm.mx/forms/d/1Mkiy_hNj3BPiv4LYk8wckqIOciPaOAuY1anCBAptZPk/formResponse" method="post" target="hidden_iframe" onsubmit="submitted=true;">
+		<div data-role="page" id="page4">		
 				<div data-theme="a" data-role="header">
 					<h1>Sugerencias</h1>
 				</div>
@@ -183,11 +183,12 @@
 						<input type="submit" name="submit" value="Enviar" id="ss-submit">				
 					</div>
 				</div>	
-		    </form>
+		    
 			<div data-theme="a" data-role="footer" data-position="fixed">
 				<h3>Innov@TE</h3>
 			</div>
-		</div>
+		    </div>
+		</form>
 	</body>
 </html>
 	
