@@ -27,10 +27,7 @@
 		        navigator.splashscreen.show();
 		    }
 		
-		    </script>
-		  <!-- Extra Codiqa features -->
-		  <link rel="stylesheet" href="css/codiqa.ext.css">
-		  
+		    </script>		  
 		  <!-- jQuery and jQuery Mobile -->
 		  <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
 		  <script src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script>
@@ -43,16 +40,87 @@
 		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script> 
 		<script src="read_menu.js"></script>
 	</head>
-	<body>		
-		<div data-role="page" id="page1">
+	<body>	
+		<div data-role="page" id="home">
 			<div data-theme="a" data-role="header">
 				<h1>Menú del día</h1>
 			</div>
 			<img src="imagenes/logo.jpg" alt="image" class="imgcenter">
 			<p></p>
 			<div data-role="content">
-				<div id=date>
-					<h2>Comedor de Estudiantes</h2>
+				<ul data-role="listview" data-divider-theme="d" data-inset="true">
+					<li data-role="list-divider" role="heading">
+						<h3><b>Comedores y Cafeterías</b><h3>
+					</li>
+					<li data-theme="c">
+						<a id="estudiantes" href="#page1" data-transition="">
+							El Comedor de Estudiantes
+						</a>
+					</li>
+					<li data-theme="c">
+						<a href="#page1" data-transition="">
+							Comedor "D" Campus Norte
+						</a>
+					</li>
+					<li data-theme="c">
+						<a href="#page1" data-transition="">
+							La Aspirina
+						</a>
+					</li>
+					<li data-theme="c">
+						<a href="#page1" data-transition="">
+							La Espiral
+						</a>
+					</li>
+				</ul>								
+				<br><br>
+				<a href="#page4" data-icon="star">Escribe tus sugerencias</a>
+			</div>		
+			<div data-theme="a" data-role="footer" data-position="fixed">
+				<h1>Innov@TE</h1>
+			</div>
+		</div>	
+		<div data-role="page" id="page1">
+			<div data-theme="a" data-role="header">
+				<h1 id="date"></h1><a href="#home" data-icon="home">Inicio</a>
+					
+			</div>
+			<img src="imagenes/logo.jpg" alt="image" class="imgcenter">
+			
+			<div data-role="content">
+				<div>
+					<h4 id="cafeteria"></h4>Barras:
+				</div>
+				<div data-role="collapsible-set" data-theme="c" data-content-theme="d" data-collapsed-icon="arrow-r" data-expanded-icon="arrow-d">
+					<div data-role="collapsible">
+						<h3>Caliente</h3>
+						<div id="normal"></div> 
+					</div>
+					<div data-role="collapsible">
+						<h3>Bienestar</h3>
+						<div id="bienestar"></div> 
+					</div>
+					<div data-role="collapsible">
+						<h3>Express</h3>
+						<div id="express"></div> 
+					</div>
+				</div><br><br>
+			</div>		
+			<div data-theme="a" data-role="footer" data-position="fixed">
+				<h3>
+					Innov@TE
+				</h3>
+			</div>
+		</div>
+		<!-- Comedor tipo 2 -->
+		<div data-role="page" id="page3">
+			<div data-theme="a" data-role="header">
+				<h1 id="cafeteria"></h1>
+			</div>
+			<img src="imagenes/logo.jpg" alt="image" class="imgcenter">
+			<div data-role="content">
+				<div>
+					<h2><p></p><h2>
 					Barras:
 				</div>
 				<div data-role="collapsible-set" data-theme="c" data-content-theme="d" data-collapsed-icon="arrow-r" data-expanded-icon="arrow-d">
@@ -72,8 +140,52 @@
 			</div>		
 			<div data-theme="a" data-role="footer" data-position="fixed">
 				<h3>
-					By Innov@TE
+					Innov@TE
 				</h3>
+			</div>
+		</div>
+		<!-- Form de sugerencias -->
+		<div data-role="page" id="page4">
+			<script type="text/javascript">var submitted=false;</script>
+			<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {window.location='index.html';}"></iframe>
+			<form action="https://docs.google.com/a/itesm.mx/forms/d/1Mkiy_hNj3BPiv4LYk8wckqIOciPaOAuY1anCBAptZPk/formResponse" method="post" target="hidden_iframe" onsubmit="submitted=true;">
+				<div data-theme="a" data-role="header">
+					<h1>Sugerencias</h1>
+				</div>
+				<img src="imagenes/logo.jpg" alt="image" class="imgcenter">
+				<div data-role="content">
+					<div>
+						
+					</div>
+					<div data-role="fieldcontain" id="question_1" data-theme="c">
+						<fieldset data-role="controlgroup" data-type="vertical" data-mini="true">
+							<legend>¿Cuáles 3 funcionalidades te gustaría que se agregara en la siguiente versión de esta app?</legend>
+							<textarea name="entry.333016728" rows="8" cols="0" id="entry_333016728" data-theme="c"></textarea>
+						</fieldset>
+					</div>
+					<div data-role="fieldcontain" id="question_2" data-theme="c">
+							<fieldset data-role="controlgroup" data-type="vertical" data-mini="true">
+								<legend>De 1-5 ¿Cómo evaluarías esta versión Beta?</legend>
+								<input name="entry.627137644" id="group_627137644_1" value="1" type="radio" data-theme="c"> 
+									<label for="group_627137644_1"> 1. Muy mejorable</label>
+								<input name="entry.627137644" id="group_627137644_2" value="2" type="radio" data-theme="c"> 
+									<label for="group_627137644_2"> 2. Mejorable </label>									
+								<input name="entry.627137644" id="group_627137644_3" value="3" type="radio" data-theme="c"> 
+									<label for="group_627137644_3"> 3. Buena </label>									
+								<input name="entry.627137644" id="group_627137644_4" value="4" type="radio" data-theme="c"> 
+									<label for="group_627137644_4"> 4. Muy buena </label>									
+								<input name="entry.627137644" id="group_627137644_5" value="5" type="radio" data-theme="c"> 
+									<label for="group_627137644_5"> 5. Excelente </label>
+							</fieldset>
+					</div>
+					<br>
+					<div>
+						<input type="submit" name="submit" value="Enviar" id="ss-submit">				
+					</div>
+				</div>	
+		    </form>
+			<div data-theme="a" data-role="footer" data-position="fixed">
+				<h3>Innov@TE</h3>
 			</div>
 		</div>
 	</body>
