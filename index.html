@@ -1,48 +1,47 @@
 <!DOCTYPE html>
 <html>
-  <head>
-  	<title>Menú del día</title>
+	<head>
+		<title>Menú del día</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 
-		<link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/jquery.mobile/1.1.0/jquery.mobile-1.1.0.min.css" />
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.css" />
 		<style type="text/css">
 			IMG.imgcenter{
 			  display: block;
 			  margin-left: auto;
 			  margin-right: auto;
 			  border:none;
-			} 
+			}
 		</style>
-		
-		 <script type="text/javascript" charset="utf-8">
 
-		    // Wait for Cordova to load
-		    //
-		    document.addEventListener("deviceready", onDeviceReady, false);
-		
-		    // Cordova is ready
-		    //
-		    function onDeviceReady() {
-		        navigator.splashscreen.show();
-		    }
-		
-		    </script>		  
-		  <!-- jQuery and jQuery Mobile -->
-		  <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-		  <script src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script>
+		<script type="text/javascript" charset="utf-8">
+			// Wait for Cordova to load
+			//
+			document.addEventListener("deviceready", onDeviceReady, false);
 
-		  <!-- Extra Codiqa features -->
-		  <script src="https://d10ajoocuyu32n.cloudfront.net/codiqa.ext.js"></script>
-		    
+			// Cordova is ready
+			//
+			function onDeviceReady() {
+				navigator.splashscreen.show();
+			}
+
+		</script>
+		<!-- jQuery and jQuery Mobile -->
+		<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+		<script src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script>
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+
+		<!-- Extra Codiqa features -->
+		<script src="https://d10ajoocuyu32n.cloudfront.net/codiqa.ext.js"></script>
+
 		<!-- SRC JavaScript -->
 		<script src="phonegap.js"></script>
-		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script> 
+
 		<script src="read_menu.js"></script>
 	</head>
-	<body>	
-		
-		     <div data-role="page" id="home">
+	<body>
+		<div data-role="page" id="home">
 			<div data-theme="a" data-role="header">
 				<h1>Menú del día</h1>
 			</div>
@@ -54,40 +53,39 @@
 						<h3><b>Comedores y Cafeterías</b><h3>
 					</li>
 					<li data-theme="c">
-						<a href="#page1" data-transition="pop">
+						<a href="#page1" data-transition="slide">
 							El Comedor de Estudiantes
 						</a>
 					</li>
 					<li data-theme="c">
-						<a href="#page1" data-transition="pop">
+						<a href="#page1" data-transition="slide">
 							Comedor "D" Campus Norte
 						</a>
 					</li>
 					<li data-theme="c">
-						<a href="#page1" data-transition="pop">
+						<a href="#page1" data-transition="slide">
 							La Aspirina
 						</a>
 					</li>
 					<li data-theme="c">
-						<a href="#page1" data-transition="pop">
+						<a href="#page1" data-transition="slide">
 							La Espiral
 						</a>
 					</li>
-				</ul>								
+				</ul>
 				<br><br>
-				<a href="#page4" data-icon="star">Escribe tus sugerencias</a>
-			</div>		
-			<div data-theme="a" data-role="footer" data-position="fixed">
-				<h1>Innov@TE</h1>
+				<a href="#page3" data-transition="slide">Envía tus sugerencias</a>
 			</div>
-		</div>	
+			<div data-theme="a" data-role="footer" data-position="fixed">
+				<h1>By Innov@TE Labs</h1>
+			</div>
+		</div>
+		<!-- Comedor tipo 1 -->
 		<div data-role="page" id="page1">
 			<div data-theme="a" data-role="header">
-				<h1 id="date"></h1><a href="#home" data-icon="home">Inicio</a>
-					
+				<h1 id="date"></h1><a href="#home" data-icon="home" data-transition="slide">Inicio</a>
 			</div>
 			<img src="imagenes/logo.jpg" alt="image" class="imgcenter">
-			
 			<div data-role="content">
 				<div>
 					<h4 id="cafeteria"></h4>Barras:
@@ -95,69 +93,63 @@
 				<div data-role="collapsible-set" data-theme="c" data-content-theme="d" data-collapsed-icon="arrow-r" data-expanded-icon="arrow-d">
 					<div data-role="collapsible">
 						<h3>Caliente</h3>
-						<div id="normal"></div> 
+						<div id="normal"></div>
 					</div>
 					<div data-role="collapsible">
 						<h3>Bienestar</h3>
-						<div id="bienestar"></div> 
+						<div id="bienestar"></div>
 					</div>
 					<div data-role="collapsible">
 						<h3>Express</h3>
-						<div id="express"></div> 
+						<div id="express"></div>
 					</div>
 				</div><br><br>
-			</div>		
+			</div>
 			<div data-theme="a" data-role="footer" data-position="fixed">
-				<h3>
-					Innov@TE
-				</h3>
+				<h1>By Innov@TE Labs</h1>
 			</div>
 		</div>
 		<!-- Comedor tipo 2 -->
-		<div data-role="page" id="page3">
+		<div data-role="page" id="page2">
 			<div data-theme="a" data-role="header">
-				<h1 id="cafeteria"></h1>
+				<h1 id="date"></h1>
+				<a href="#home" data-icon="home" data-transition="slide">Inicio</a>
 			</div>
 			<img src="imagenes/logo.jpg" alt="image" class="imgcenter">
 			<div data-role="content">
 				<div>
-					<h2><p></p><h2>
-					Barras:
+					<h4 id="cafeteria"></h4>Barras:
 				</div>
 				<div data-role="collapsible-set" data-theme="c" data-content-theme="d" data-collapsed-icon="arrow-r" data-expanded-icon="arrow-d">
 					<div data-role="collapsible">
 						<h3>Caliente</h3>
-						<div id="normal"></div> 
+						<div id="normal"></div>
 					</div>
 					<div data-role="collapsible">
 						<h3>Bienestar</h3>
-						<div id="bienestar"></div> 
+						<div id="bienestar"></div>
 					</div>
 					<div data-role="collapsible">
 						<h3>Express</h3>
-						<div id="express"></div> 
+						<div id="express"></div>
 					</div>
 				</div><br><br>
-			</div>		
+			</div>
 			<div data-theme="a" data-role="footer" data-position="fixed">
-				<h3>
-					Innov@TE
-				</h3>
+				<h1>By Innov@TE Labs</h1>
 			</div>
 		</div>
 		<!-- Form de sugerencias -->
-		<div data-role="page" id="page4">
-			<script type="text/javascript">var submitted=false;</script>
-			<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {window.location='gracias.html';}"></iframe>
-			<form action="https://docs.google.com/a/itesm.mx/forms/d/1Mkiy_hNj3BPiv4LYk8wckqIOciPaOAuY1anCBAptZPk/formResponse" method="post" data-ajax="false" target="hidden_iframe" onsubmit="submitted=true;">
-				<div data-theme="a" data-role="header">
-					<h1>Sugerencias</h1>
-				</div>
-				<img src="imagenes/logo.jpg" alt="image" class="imgcenter">
-				<div data-role="content">
-					<div>
-						
-					</div>
+		<div data-role="page" id="page3">
+			<div data-theme="a" data-role="header">
+				<h1>Sugerencias</h1>
+				<a data-role="button" data-inline="true" data-transition="slide" href="#home" data-icon="delete" data-iconpos="left" class="ui-btn-left">Cancelar</a>
+			</div>
+			<img src="imagenes/logo.jpg" alt="image" class="imgcenter">
+			<div data-role="content">
+				<script type="text/javascript">var submitted=false;</script>
+				<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {window.location='#home';}"></iframe>
+				<form action="https://docs.google.com/a/itesm.mx/forms/d/1Mkiy_hNj3BPiv4LYk8wckqIOciPaOAuY1anCBAptZPk/formResponse" method="post" data-ajax="false" target="hidden_iframe" onsubmit="submitted=true;">
 					<div data-role="fieldcontain" id="question_1" data-theme="c">
 						<fieldset data-role="controlgroup" data-type="vertical" data-mini="true">
 							<legend>¿Cuáles 3 funcionalidades te gustaría que se agregara en la siguiente versión de esta app?</legend>
@@ -166,30 +158,30 @@
 					</div>
 					<div data-role="fieldcontain" id="question_2" data-theme="c">
 							<fieldset data-role="controlgroup" data-type="vertical" data-mini="true">
-								<legend>De 1-5 ¿Cómo evaluarías esta versión Beta?</legend>
-								<input name="entry.627137644" id="group_627137644_1" value="1" type="radio" data-theme="c"> 
-									<label for="group_627137644_1"> 1. Muy mejorable</label>
-								<input name="entry.627137644" id="group_627137644_2" value="2" type="radio" data-theme="c"> 
-									<label for="group_627137644_2"> 2. Mejorable </label>									
-								<input name="entry.627137644" id="group_627137644_3" value="3" type="radio" data-theme="c"> 
-									<label for="group_627137644_3"> 3. Buena </label>									
-								<input name="entry.627137644" id="group_627137644_4" value="4" type="radio" data-theme="c"> 
-									<label for="group_627137644_4"> 4. Muy buena </label>									
-								<input name="entry.627137644" id="group_627137644_5" value="5" type="radio" data-theme="c"> 
-									<label for="group_627137644_5"> 5. Excelente </label>
+								<legend>¿Cómo evaluarías esta versión Beta?</legend>
+								<input name="entry.627137644" id="group_627137644_1" value="5" type="radio" data-theme="c">
+									<label for="group_627137644_1"> 5. Excelente </label>
+								<input name="entry.627137644" id="group_627137644_2" value="4" type="radio" data-theme="c">
+									<label for="group_627137644_2"> 4. Muy buena </label>
+								<input name="entry.627137644" id="group_627137644_3" value="3" type="radio" data-theme="c">
+									<label for="group_627137644_3"> 3. Buena </label>
+								<input name="entry.627137644" id="group_627137644_4" value="2" type="radio" data-theme="c">
+									<label for="group_627137644_4"> 2. Mejorable </label>
+								<input name="entry.627137644" id="group_627137644_5" value="1" type="radio" data-theme="c">
+									<label for="group_627137644_5"> 1. Muy mejorable </label>
 							</fieldset>
 					</div>
 					<br>
 					<div>
-						<input type="submit" name="submit" value="Enviar" id="ss-submit">				
+						<input type="submit" name="submit" value="Enviar" id="ss-submit">
 					</div>
-				</div>	
-		    	</form>
-			<div data-theme="a" data-role="footer" data-position="fixed">
-				<h3>Innov@TE</h3>
+				</form>
 			</div>
-		</div>		
+			<div data-theme="a" data-role="footer" data-position="fixed">
+				<h1>By Innov@TE Labs</h1>
+			</div>
+		</div>
 	</body>
 </html>
-	
-	
+
+
