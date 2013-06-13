@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
     <widget xmlns = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
-        id        = "com.innovate.cafeterias-tec"
+        id        = "com.innovate.menu-cafeteria"
         versionCode="11" 
         version   = "0.2.0">
 
@@ -14,7 +14,7 @@
     </description>
 
     <author email="leticia.palos@tecvirtual.mx">
-        Development Team Innov@TE 
+        Innov@TE Labs 
     </author>
     
     <!--
